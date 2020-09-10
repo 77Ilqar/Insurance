@@ -1,0 +1,126 @@
+﻿@model PagesViewModel
+
+<!-- start page-title -->
+<section class="page-title">
+    <div class="page-title-container">
+        <div class="page-title-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <h2>About us</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li>About us</li>
+                        </ol>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </div>
+    </div>
+</section>
+<!-- end page-title -->
+
+<!-- start about-section-s4 -->
+<section class="about-section-s4 section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-3">
+                <div class="section-title mt">
+                    <span>@Model.Abouts.ElementAt(0).Name</span>
+                    <img src="~/images/@Model.Abouts.ElementAt(0).Logo">
+                </div>
+                <div class="info">
+                    <h3>@Model.Abouts.ElementAt(0).PhoneText</h3>
+                    <h4>@Model.Abouts.ElementAt(0).Email</h4>
+                    <a href="@Model.Abouts.ElementAt(0).EndPoint" class="theme-btn">@Model.Abouts.ElementAt(0).ActionText</a>
+                </div>
+            </div>
+            <div class="col col-md-5">
+                <div class="details-text mt">
+                    <h4>@Model.Abouts.ElementAt(0).Text</h4>
+                    <p>@Model.Abouts.ElementAt(0).SubText</p>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="features-grid clearfix">
+
+                    @for (int a = 0; a < 3; a++)
+                    {
+                        <div class="grid">
+                            <div class="icon">
+                                <i class="@Model.Abouts.ElementAt(0).Features.ElementAt(a).Icon"></i>
+                            </div>
+                            <h3>@Model.Abouts.ElementAt(0).Features.ElementAt(a).Title</h3>
+                            <p>@Model.Abouts.ElementAt(0).Features.ElementAt(a).Subtitle</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end about-section-s4 -->
+
+<!-- stat fun-fact-section -->
+<section class="fun-fact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="fun-fact-area">
+                    <div class="fun-fact-grids clearfix">
+                        @foreach (var item in Model.FunFacts)
+                        {
+                            @if (item.IsInIndex == false)
+                            {
+                                <div class="grid">
+                                    <div class="info">
+                                        <h3><span class="odometer" data-count="@item.Number">00</span>+</h3>
+                                        <p>@item.Title</p>
+                                        <p>@item.Subtitle</p>
+                                        <a href="@item.EndPoint" class="theme-btn-s3">@item.ActionText</a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end fun-fact-section -->
+
+<vc:agent-picture></vc:agent-picture>
+
+<!-- start testimonials-section-s2 -->
+<section class="testimonials-section-s2 section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="section-title">
+                    <span>Testimonials</span>
+                    <h2>What People Says About Us</h2>
+                </div>
+
+                <div class="testimonials-s2-nav">
+                    <div class="slider-s2-arrows">
+                        <div class="slider-prev"><i class="fi flaticon-left-arrow-angle-big-gross-symbol"></i></div>
+                        <div class="slider-next"><i class="fi flaticon-arrow-angle-pointing-to-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="testimonials-slider-holder">
+                    <div class="testimonials-slider-s2">
+                        <vc:testimonial-item></vc:testimonial-item>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end testimonials-section-s2 -->
+
+<vc:brand></vc:brand>

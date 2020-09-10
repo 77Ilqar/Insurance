@@ -1,0 +1,294 @@
+﻿@model  HomeViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<vc:slider-item></vc:slider-item>
+
+
+
+
+<!-- start about-section -->
+<section class="about-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="inner clearfix">
+                    <div class="left-col">
+                        <div class="section-title">
+                            <span>@Model.Abouts.ElementAt(0).Name</span>
+                            <h2>@Model.Abouts.ElementAt(0).Title</h2>
+                        </div>
+                        <div class="details">
+                            <p>@Model.Abouts.ElementAt(0).Subtitle</p>
+                            <h5>@Model.Abouts.ElementAt(0).PhoneText</h5>
+                        </div>
+                        <div class="fun-fact-area">
+                            <div class="fun-fact-grids clearfix">
+                                @foreach (var item in Model.FunFacts)
+                                {
+                                    @if (item.IsInIndex == true)
+                                    {
+                                        <div class="grid">
+                                            <div class="info">
+                                                <i class="@item.Icon"></i>
+                                                <h3><span class="odometer" data-count="@item.Number">00</span></h3>
+                                                <p>@item.Title</p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="about-info">
+                            <h3>@Model.Abouts.ElementAt(0).Text</h3>
+                            <p>@Model.Abouts.ElementAt(0).SubText</p>
+                            <a href="@Model.Abouts.ElementAt(0).EndPoint" class="theme-btn">@Model.Abouts.ElementAt(0).ActionText</a>
+                        </div>
+                        <div class="img-holder">
+                            <img src="~/images/@Model.Abouts.ElementAt(0).Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end about-section -->
+<!-- start service-section -->
+<section class="service-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title-s2">
+                    <span>Our Best Services</span>
+                    <h2>Best insurance services for our client’s</h2>
+                </div>
+            </div>
+            <div class="col col-xs-12">
+                <div class="service-slider">
+                    @foreach (var item in @Model.Services.ElementAt(0).Categories)
+                    {
+                        <div class="grid">
+                            <a href="@item.EndPoint">
+                                <i class="@item.Icon"></i>
+                                <h3>@item.Name</h3>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end service-section -->
+<!-- start cta-section -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="inner clearfix">
+                    <div class="left-col">
+                        <div class="section-title">
+                            <span>@Model.Ctas.ElementAt(0).Name</span>
+                            <h2>@Model.Ctas.ElementAt(0).Title</h2>
+                        </div>
+                        <div class="details">
+                            <p>@Model.Ctas.ElementAt(0).Subtitle</p>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="contact-info">
+                            <p>@Model.Ctas.ElementAt(0).Text</p>
+                            <h2>@Model.Ctas.ElementAt(0).Phone</h2>
+                            <a href="@Model.Ctas.ElementAt(0).EndPoint" class="theme-btn-s3">@Model.Ctas.ElementAt(0).ActionText</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-xs-12">
+                <div class="video-area">
+                    <div class="img-holder">
+                        <img src="~/images/@Model.Ctas.ElementAt(0).Image">
+                        <div class="video-btns">
+                            <a href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1" class="video-btn" data-type="iframe" tabindex="0"><i class="fi flaticon-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="experience-text">
+                        <p>@Html.Raw(Model.Ctas.ElementAt(0).Detail)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end cta-section -->
+
+
+
+
+
+<!-- start pricing-section -->
+<section class="policy-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title-s2">
+                    <span>@Model.Plans.ElementAt(0).Title</span>
+                    <h2>@Model.Plans.ElementAt(0).Subtitle</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="policy-grids">
+                    @foreach (var item in @Model.Plans.ElementAt(0).PlanItems)
+                    {
+                        <div class="grid">
+                            <div class="policy-header">
+                                <h5>@item.Name</h5>
+                                <i class="@item.Icon"></i>
+                            </div>
+                            <div class="policy-body">
+                                <ul>
+                                    @Html.Raw(item.Policy)
+                                </ul>
+                                <a href="@item.EndPoint" class="theme-btn-s3">@item.ActionText</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end policy-section -->
+
+
+
+
+
+<!-- start cta-s2-section -->
+<section class="cta-s2-section">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="content-area clearfix">
+                    <div class="left-col">
+                        <div class="details">
+                            <h2>@Model.Ctas.ElementAt(1).Title</h2>
+                            <p>@Model.Ctas.ElementAt(1).Subtitle</p>
+                            <ul>
+                                <li><a href="#">Insurance</a></li>
+                                <li><a href="#">Understanding Homeowners Insurance</a></li>
+                                <li><a href="#">Understanding Car Insurance</a></li>
+                                <li><a href="#">Resources Overview</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="text">
+                            <p>@Model.Ctas.ElementAt(1).Text <span>@Model.Ctas.ElementAt(1).Phone</span></p>
+                        </div>
+                        <div class="img-holder">
+                            <img src="~/images/@Model.Ctas.ElementAt(1).Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end cta-s2-section -->
+
+
+<!-- start testimonials-section -->
+<section class="testimonials-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="section-title-s2">
+                    <span>Testimonials</span>
+                    <h2>What People Says About Us</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="testimonials-slider">
+                   <vc:testimonial-item></vc:testimonial-item>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end testimonials-section -->
+
+
+
+<!-- start blog-section -->
+<section class="blog-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="content-area">
+                    <div class="left-col">
+                        <div class="section-title-s3">
+                            <span>From our blog</span>
+                            <h2>Industry knowledge</h2>
+                            <p>With a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out</p>
+                        </div>
+                        <div class="blog-post-w-media post">
+                            <div class="entry-media">
+                                <img src="~/images/blog/img-1.jpg">
+                            </div>
+                            <p class="cat"><i class="fi flaticon-tag-1"></i> Insurance, company</p>
+                            <h3><a href="#">How to shape your child’s dream into reality!</a></h3>
+                            <p class="text">A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright</p>
+                            <a href="#" class="theme-btn">Read more</a>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="post">
+                            <p class="cat"><i class="fi flaticon-tag-1"></i> Insurance, company</p>
+                            <h3><a href="#">Villagers who to do have access to hospitals</a></h3>
+                            <p class="text">A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright</p>
+                            <a href="#" class="read-more">Read more</a>
+                        </div>
+                        <div class="post">
+                            <p class="cat"><i class="fi flaticon-tag-1"></i> Insurance, company</p>
+                            <h3><a href="#">Life boosts its digital presence with dash</a></h3>
+                            <p class="text">A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright</p>
+                            <a href="#" class="read-more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end blog-section -->
+
+
+
+<!-- start cta-s3-section -->
+<section class="cta-s3-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="inner clearfix">
+                    <div class="cta-content">
+                        <h2>@Model.Ctas.ElementAt(2).Title</h2>
+                        <p>@Model.Ctas.ElementAt(2).Title</p>
+                        <a href="@Model.Ctas.ElementAt(2).EndPoint" class="theme-btn-s4">@Model.Ctas.ElementAt(2).ActionText</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end cta-s3-section -->
