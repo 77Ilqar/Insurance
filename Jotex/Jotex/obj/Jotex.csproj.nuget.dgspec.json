@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mamma\\source\\repos\\Jotex\\Jotex\\Jotex.csproj": {}
+    "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Jotex\\Jotex.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mamma\\source\\repos\\Jotex\\Jotex\\Jotex.csproj": {
+    "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Jotex\\Jotex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mamma\\source\\repos\\Jotex\\Jotex\\Jotex.csproj",
+        "projectUniqueName": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Jotex\\Jotex.csproj",
         "projectName": "Jotex",
-        "projectPath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Jotex\\Jotex.csproj",
+        "projectPath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Jotex\\Jotex.csproj",
         "packagesPath": "C:\\Users\\mamma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Jotex\\obj\\",
+        "outputPath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Jotex\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\Repository.csproj"
+              "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\Repository.csproj"
               }
             }
           }
@@ -82,18 +82,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\Repository.csproj": {
+    "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\mamma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -123,6 +123,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -153,7 +157,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

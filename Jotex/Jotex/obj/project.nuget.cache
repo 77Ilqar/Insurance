@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "a56iuTKazG81MjTa0AsD5J1O7/FNQB3V+zQLxd317kBqwhSQLYqVQMUXOjDX+NxtvwmVsAp5dmsz1h0LtkC9Bw==",
+  "dgSpecHash": "FijE99qmkQBCAIcb7HzRagtsLEoTx1sWDlFo2v4AJRvMU15dCAz4DpJYYgjaBaPzdAEuPdjTMDYJ6DAv79J/yw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Jotex\\Jotex.csproj",
+  "projectFilePath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Jotex\\Jotex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mamma\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\cloudinarydotnet\\1.12.0\\cloudinarydotnet.1.12.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

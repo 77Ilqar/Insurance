@@ -116,5 +116,24 @@ namespace Repository.Repositories.ContentRepositories
         {
             return _context.Queries.Where(q => q.Status).ToList();
         }
+
+        public IEnumerable<SliderItem> GetSliderItemsForAdmin()
+        {
+            return _context.SliderItems.ToList();
+        }
+
+        public SliderItem CreateSliderItem(SliderItem model)
+        {
+            model.AddedDate = DateTime.Now;
+            _context.SliderItems.Add(model);
+            _context.SaveChanges();
+            return model;
+        }
+
+        public void AddPhoto(SliderItem slidePhoto)
+        {
+            _context.SliderItems.Add(slidePhoto);
+            _context.SaveChanges();
+        }
     }
 }

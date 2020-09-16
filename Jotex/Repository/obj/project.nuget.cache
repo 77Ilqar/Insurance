@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gNsZHDEsgipLiJWyPDP6TF3MBiva9k/YRvyzAE93poI4MUoPM83ytWdWQRAGG88VSthW69YR/aoC0Ww8AjRIFA==",
+  "dgSpecHash": "aOP5hkRmO4USmffyQ0GMb7Di0vhA2L3A1bNIxsULKlXKcbH7ZrJCVXGmFfCkqoZUpdNyFo91AIVkyBog0iksag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mamma\\source\\repos\\Jotex\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\mamma\\Desktop\\Insurance\\Jotex\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mamma\\.nuget\\packages\\cloudinarydotnet\\1.12.0\\cloudinarydotnet.1.12.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

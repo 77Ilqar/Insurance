@@ -12,6 +12,7 @@ namespace Repository.Data
 
 
         public DbSet<About> Abouts { get; set; }
+        public DbSet<MyAdmin> MyAdmins { get; set; }
         public DbSet<FunFact> FunFacts { get; set; }
         public DbSet<Agent> Agents { get; set; }
         public DbSet<AgentPicture> AgentPictures { get; set; }
