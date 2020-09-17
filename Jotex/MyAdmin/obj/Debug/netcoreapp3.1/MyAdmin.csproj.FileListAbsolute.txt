@@ -153,3 +153,4 @@ C:\Users\mamma\Desktop\Insurance\Jotex\MyAdmin\obj\Debug\netcoreapp3.1\MyAdmin.M
 C:\Users\mamma\Desktop\Insurance\Jotex\MyAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\mamma\Desktop\Insurance\Jotex\MyAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\mamma\Desktop\Insurance\Jotex\MyAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Slider\Index.cshtml.g.cs
+C:\Users\mamma\Desktop\Insurance\Jotex\MyAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Slider\Create.cshtml.g.cs

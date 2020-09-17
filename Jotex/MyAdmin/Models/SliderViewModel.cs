@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyAdmin.Models
 {
-    public class SliderItemViewModel
+    public class SliderViewModel
     {
         [Required]
         public int Id { get; set; }

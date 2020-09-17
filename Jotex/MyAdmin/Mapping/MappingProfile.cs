@@ -13,8 +13,8 @@ namespace MyAdmin.Mapping
 
         public MappingProfile()
         {
-            CreateMap<SliderItem, SliderItemViewModel>();
-            CreateMap<SliderItemViewModel, SliderItem>();
+            CreateMap<Slider, SliderViewModel>();
+            CreateMap<SliderViewModel, Slider>();
 
             //CreateMap<TestimonialItem, TestimonialItemViewModel>();
 

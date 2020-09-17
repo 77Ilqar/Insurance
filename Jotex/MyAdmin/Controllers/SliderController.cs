@@ -36,10 +36,8 @@ namespace MyAdmin.Controllers
 
         public IActionResult Index()
         {
-            var slider = _contentRepository.GetSliderItemsForAdmin();
-
-            var model = _mapper.Map<IEnumerable<SliderItem>, IEnumerable<SliderItemViewModel>>(slider);
-
+            var slider = _contentRepository.GetSlidersForAdmin();
+            var model = _mapper.Map<IEnumerable<Slider>, IEnumerable<SliderViewModel>>(slider);
             return View(model);
         }
 
@@ -51,15 +49,15 @@ namespace MyAdmin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(SliderItemViewModel slider)
+        public IActionResult Create(SliderViewModel slider)
         {
 
             if (ModelState.IsValid)
             {
-                SliderItem model = _mapper.Map<SliderItemViewModel, SliderItem>(slider);
+                Slider model = _mapper.Map<SliderViewModel, Slider>(slider);
 
                 model.AddedBy = _admin.Fullname;
-                _contentRepository.CreateSliderItem(model);
+                _contentRepository.CreateSlider(model);
                 return RedirectToAction("index");
             }
             return View(slider);
@@ -101,32 +99,34 @@ namespace MyAdmin.Controllers
         //    _homeRepository.DeleteSlider(slider);
         //    return RedirectToAction("index");
         //}
-        //[HttpPost]
-        //public IActionResult Upload(IFormFile file, int? sliderId)
-        //{
-        //    var filename = _fileManager.Upload(file);
-        //    var publicId = _cloudinaryService.Store(filename);
-        //    _fileManager.Delete(filename);
+        [HttpPost]
+        public IActionResult Upload(IFormFile file, int? sliderId)
+        {
 
-        //    if (sliderId != null)
-        //    {
-        //        SliderItem slidePhoto = new SliderItem
-        //        {
-        //            AddedBy = _admin.Fullname,
-        //            AddedDate = DateTime.Now,
-        //            Image = publicId,
+            var filename = _fileManager.Upload(file);
+            var publicId = _cloudinaryService.Store(filename);
+            _fileManager.Delete(filename);
 
 
-        //        };
-        //        _homeRepository.AddPhoto(slidePhoto);
-        //    }
+            if (sliderId != null)
+            {
+                Slider slidePhoto = new Slider
+                {
+                    AddedBy = _admin.Fullname,
+                    AddedDate = DateTime.Now,
+                    Image = publicId,
 
-        //    return Ok(new
-        //    {
-        //        filename = publicId,
-        //        src = _cloudinaryService.BuildUrl(publicId)
-        //    });
-        //}
+
+                };
+                _contentRepository.AddPhoto(slidePhoto);
+            }
+
+            return Ok(new
+            {
+                filename = publicId,
+                src = _cloudinaryService.BuildUrl(publicId)
+            });
+        }
 
         //[HttpPost]
         //public IActionResult Remove(string name, int? id)

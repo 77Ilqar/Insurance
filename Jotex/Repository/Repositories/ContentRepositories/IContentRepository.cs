@@ -7,35 +7,7 @@ namespace Repository.Repositories.ContentRepositories
 {
     public interface IContentRepository
     {
-        //IEnumerable<SliderItem> GetSliderItems();
-        //IEnumerable<Brand> GetBrands();
-        //IEnumerable<TestimonialItem> GetTestimonialItems();
-        //IEnumerable<Agent> GetAgents();
-        //IEnumerable<AgentPicture> GetAgentPictures();
-
-
-        //IEnumerable<About> GetAbouts();
-        //IEnumerable<FunFact> GetFunFacts();
-
-
-        //IEnumerable<Service> GetServiceWithCategories();
-
-        //IEnumerable<Cta> GetCtas();
-
-        //IEnumerable<Plan> GetPlansWithItems();
-
-        //IEnumerable<FAQ> GetFAQs();
-
-        //IEnumerable<CategoryDetail> GetCategoryDetails();
-
-        //IEnumerable<Study> GetStudies();
-
-        //IEnumerable<StudySingle> GetStudySingles();
-
-        //IEnumerable<StudyDetail> GetStudyDetails();
-
-
-        //IEnumerable<Query> GetQueries();
+        
 
         IEnumerable<SliderItem> GetSliderItems();
         IEnumerable<SliderItem> GetSliderItemsForAdmin();
@@ -72,6 +44,7 @@ namespace Repository.Repositories.ContentRepositories
 
         IEnumerable<Query> GetQueries();
         void AddPhoto(SliderItem slidePhoto);
-
+        IEnumerable<Slider> GetSlidersForAdmin();
+        void AddPhoto(Slider slidePhoto);
     }
 }

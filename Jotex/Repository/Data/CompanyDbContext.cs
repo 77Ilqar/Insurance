@@ -30,6 +30,7 @@ namespace Repository.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<SliderItem> SliderItems { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
         public DbSet<Study> Studies { get; set; }
         public DbSet<StudyDetail> StudyDetails { get; set; }
         public DbSet<StudySingle> StudySingles { get; set; }
